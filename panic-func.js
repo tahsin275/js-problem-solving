@@ -12,3 +12,14 @@ Example input: "I'm almost out of coffee"
 Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 
 */
+
+function panic(str) {
+    const splitStr = str.split(" ");
+    if (splitStr.length == 1) {
+        return str.toUpperCase();
+    } else {
+        return splitStr.join(" 😱 ").toUpperCase();
+    }
+}
+
+console.log(panic("Well hello there!"));
