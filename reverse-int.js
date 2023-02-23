@@ -21,13 +21,14 @@ function reverseInt(n) {
     //     }
     // }
     // if (modArr[0] != "-") {
-    //     return parseInt(modArr.reverse().join(""));
+    //     return Number(modArr.reverse().join(""));
     // } else {
     //     modArr.splice(0, 1);
     //     modArr.reverse();
     //     modArr.unshift("-");
-    //     return parseInt(modArr.join(""));
+    //     return Number(modArr.join(""));
     // }
+
     const reversed = n.toString().split("").reverse().join("");
     return parseInt(reversed) * Math.sign(n);
 }
