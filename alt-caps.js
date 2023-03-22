@@ -7,21 +7,15 @@ Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
 function altCaps(str) {
-    const arr = str.split(" ");
-    const newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        const newTwo = [];
-        for (let j = 0; j < arr[i].length; j++) {
-            const str = arr[i];
-            if ((j > 0) & (j % 2 == 1)) {
-                newTwo.push(str[j].toUpperCase());
-            } else {
-                newTwo.push(str[j]);
-            }
+    let capitalizedSentence = "";
+    for (let i = 0; i < str.length; i++) {
+        if (i % 2 == 0) {
+            capitalizedSentence += str[i].toUpperCase();
+        } else {
+            capitalizedSentence += str[i];
         }
-        newArr.push(newTwo.join(""));
     }
-    return newArr.join(" ");
+    return capitalizedSentence;
 }
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
